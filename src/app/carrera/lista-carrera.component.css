@@ -1,0 +1,74 @@
+.tolo, .alineado {
+    position: relative;
+    vertical-align: middle;
+    border-bottom: 1px dotted black;
+}
+.tolo .tolotexto {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tolo:hover .tolotexto {
+    visibility: visible;
+}
+
+.selectorcarrera{
+    cursor: pointer;    
+}
+.btn-sucess{
+    border: solid 1px black;
+}
+.p-profile{
+    background: url(/assets/img/defrent.jpg);
+    width: 100%;
+    height: 495px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.p-rgt-sec{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.p-tag{
+    background: #989898;
+    color: #fff;
+    padding: 5px 10 px;
+    font-size: 15px;
+}
+.p-des{
+    color: #acacac;
+    width: 80%;
+}
+form .form-group{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 2px 12px 1px #0003;
+    width: 80%;
+}
+form .form-control{
+    min-height: 60px;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    background-color: #fff;
+    width: calc(100% - 141px);
+}
+form .btn-warning{
+    min-height: 60px;
+    border: 0;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-weight: 500;
+}

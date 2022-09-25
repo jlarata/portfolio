@@ -49,3 +49,9 @@ header ul li a:hover::after, header ul li a.is-active::after{
     right: -3px;
 
 }
+header button{
+    color: #000;
+    font-weight: 500;
+    background-color: white;
+    border: none;
+}

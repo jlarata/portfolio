@@ -1,0 +1,128 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile">
+
+            </div>
+        </div>
+        <div class="col-sm-7 p-rgt-sec">
+            <div>
+                <span class="p-tag">Education</span>
+
+                <h1 class="mt-4">Education</h1>
+            
+                <div *ngFor="let Persona of personas">
+                    <br>
+                    <ul>
+                        <li class="cada">
+                            <h5><img src="assets/img/rm_arw_rgt.png" width="15"/>{{Persona.nombreYApellido}}
+                            </h5>
+                        </li>
+                        
+                        <div *ngFor="let Carrera of carreras">
+                            <ul>
+                                <div *ngIf="Persona.nombreYApellido==personas[Carrera.idPersona!-1].nombreYApellido"
+                                class="cada">
+
+                                    <li><h5><img src="assets/img/rm_arw_rgt.png" width="15"/>{{Carrera.titulo}}</h5>
+                                    </li>
+                                    <li class="cada">
+                                    {{Carrera.periodo}}
+                                    </li>
+                                    <li class="cada">
+                                    {{Carrera.institucion}}
+                                    </li>
+                                    <li class="cada">
+                                    {{Carrera.finalizado}}
+                                    </li>
+                                </div> 
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+
+
+                
+<!-- esta era la función original de prueba                <div *ngFor="let Carrera of carreras">
+                    <br>
+                    <ul>
+                        <li class="cada">
+                            {{personas[Carrera.idPersona!-1].nombreYApellido}}
+                        </li>
+                        <li class="cada">
+                        <h5><img src="assets/img/rm_arw_rgt.png" width="15"/>{{Carrera.titulo}}</h5>
+                        </li>
+                        <li class="cada">
+                        {{Carrera.periodo}}
+                        </li>
+                    <li class="cada">
+                        {{Carrera.institucion}}
+                    </li>
+                    <li class="cada">
+                        {{Carrera.finalizado}}
+                    </li>
+                    
+                </ul>
+            </div>--> 
+            <br>
+            <h1>control</h1>
+            <br>
+                <table class="table"><thead>
+                <tr>
+                    <th scope="col">IDcarrera</th>
+                    <th scope="col">IDpersona</th>
+                    <th scope="col">periodo</th>
+                    <th scope="col">institucion</th>
+                    <th scope="col">studies</th>
+                    <th scope="col">ended?</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Carrera of carreras">
+                    <td>{{Carrera.idCarrera}}</td>
+
+                    <td *ngIf="personas[Carrera.idPersona!-1]" class="selectorcarrera tolo"
+                     (click)="cargarCarrerasPorId(Carrera.idPersona!)">{{personas[Carrera.idPersona!-1].nombreYApellido}}
+                        <span class="tolotexto">Click here to sort Studies by this Person only</span>
+                    </td>
+                
+                    <td class="alineado">{{Carrera.periodo}}</td>
+                    <td class="alineado">{{Carrera.institucion}}</td>
+                    <td class="alineado">{{Carrera.titulo}}</td>
+                    <td class="alineado">{{Carrera.finalizado}}</td>
+
+                    <td class="alineado"><button class="btn btn-primary" routerLink="/carrdetalle/{{Carrera.idCarrera}}">See</button></td>
+                    <td class="alineado"><button class="btn btn-warning" routerLink="/carreditar/{{Carrera.idCarrera}}">Edit</button></td>
+                    <td class="alineado"><button class="btn btn-danger" (click)="onDelete(Carrera.idCarrera!)">Borrar</button></td>
+                </tr>
+            </tbody></table>
+            <br>
+            <button class="btn btn-sucess" (click)="cargarCarreras()"> See All Studies</button>    
+            <br><br>
+
+            <div>
+                <button class="btn btn-sucess" routerLink="/carrnuevo">New Studies</button>
+            </div>
+            <!--    <ul *ngFor="let Carrera of carreras">
+                    <li> {{Carrera.idCarrera}}</li>
+                    <li class="cada">{{Carrera.idPersona}}</li>
+                    <li class="cada">{{Carrera.periodo}}</li>
+                    <li class="cada">{{Carrera.institucion}}</li>
+                    <li class="cada">{{Carrera.titulo}}</li>
+                    <li class="cada">{{Carrera.finalizado}}</li>
+                    
+                </ul>>
+                
+                <a href="#" class="p-readmore">Read more <img src="assets/img/rm_arw_rgt.png" alt="Read More"
+                    width="15" class="ml-2"/></a>-->
+                    
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

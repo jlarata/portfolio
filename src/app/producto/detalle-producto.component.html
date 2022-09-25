@@ -1,0 +1,20 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile"></div>
+        </div>
+        
+        <div class="col-sm-7">
+            <br><br><br><br>
+            <div *ngIf="producto">
+                <p><b>Product name: </b>{{producto.nombreProducto}}</p><br>
+                <p><b>Product price: </b>for you, u$s {{producto.precio}} </p><br>
+            </div>
+            <button class="btn btn-primary" (click)="volver()">Back</button>
+                
+        </div>
+    </div>
+    </div>
+</section>

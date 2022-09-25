@@ -1,0 +1,23 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile"></div>
+        </div>
+        
+        <div class="col-sm-7">
+            <br><br><br><br>
+            <div *ngIf="carrera">
+                <p><b>degree:</b> {{carrera.titulo}}</p><br>
+                <p><b>institution: </b>{{carrera.institucion}}</p><br>
+                <p><b>period: </b>{{carrera.periodo}}</p><br>
+                <p><b>completed: </b>{{carrera.finalizado}}</p><br>
+
+            </div>
+            <button class="btn btn-primary" (click)="volver()">Back</button>
+                
+        </div>
+    </div>
+    </div>
+</section>
