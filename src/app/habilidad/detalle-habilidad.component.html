@@ -1,0 +1,24 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile"></div>
+        </div>
+        
+        <div class="col-sm-7">
+            <br><br><br><br>
+            <div *ngIf="habilidad">
+                <p><b>skill name:</b> {{habilidad.nombreHabilidad}}</p><br>
+                <p><b>skill type </b>{{habilidad.tipoHabilidad}}</p><br>
+                <p><b>skill level: </b>{{habilidad.nivelHabilidad}}</p><br>
+                <p><b>idHabilidad: </b>{{habilidad.idHabilidad}}</p><br>
+                <p *ngIf="personas"><b>idpersona: </b>{{personas[habilidad.idPersona!-1].nombreYApellido}}</p><br>
+
+            </div>
+            <button class="btn btn-primary" (click)="volver()">Back</button>
+                
+        </div>
+    </div>
+    </div>
+</section>

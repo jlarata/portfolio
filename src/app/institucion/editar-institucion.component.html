@@ -1,0 +1,55 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile"></div>
+        </div>
+       
+            <div class="col">
+                <h5>Update Institution</h5>
+                <br>
+                <div class="col">
+
+                <form name="form" (ngSubmit)="onUpdate()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">institution name: </label>
+                        <input type="text" class="form-control" name="name" [(ngModel)]="form.nombreInstitucion" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">institution adress: </label>
+                        <input type="text" class="form-control" name="direccion" [(ngModel)]="form.direccionInstitucion" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">tel contact: </label>
+                        <input type="text" class="form-control" name="tel" [(ngModel)]="form.contactoTel" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">mail contact: </label>
+                        <input type="text" class="form-control" name="mail" [(ngModel)]="form.contactoMail" required autocomplete="off">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Update</button>
+                    </div>
+                </form>
+                <br>
+                <div>
+                <button class="btn btn-primary" (click)="volver()">Back</button>
+                </div>
+                </div>  
+
+                <br><br>
+                
+                <div *ngIf="failActualizado" class="float-left">
+                    <p class="p-3 bg-danger text-white rounded">Error: {{msjErr}}</p>
+                </div>
+                <div *ngIf="actualizado" class="float-left">
+                    <p class="p-3 bg-sucess text-black rounded">OK: {{msjOK}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

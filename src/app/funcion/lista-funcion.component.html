@@ -1,0 +1,94 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile">
+
+            </div>
+        </div>
+        <div class="col-sm-7 p-rgt-sec">
+            <div>
+                <span class="p-tag">Work Experience</span>
+
+                <h1 class="mt-4">Work Experience</h1>
+            
+                <div *ngFor="let Persona of personas">
+                    <br>
+                    <ul>
+                        <li class="cada">
+                            <h3><img src="assets/img/rm_arw_rgt.png" width="15"/>{{Persona.nombreYApellido}}
+                            </h3>
+                        </li>
+                        
+                        <div *ngFor="let Funcion of funciones">
+                            <ul>
+                                <div *ngIf="Persona.nombreYApellido==personas[Funcion.idPersona!-1].nombreYApellido"
+                                class="cada">
+
+                                    <li><h5><img src="assets/img/rm_arw_rgt.png" width="15"/>{{Funcion.descripcionFuncion}}</h5>
+                                    </li>
+                                    <li class="cada">{{Funcion.periodoFuncion}}
+                                    </li>
+                                    <li *ngIf="instituciones" class="cada">{{instituciones[Funcion.idInstitucion!-1].nombreInstitucion}}
+                                    </li>
+                                </div> 
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+
+
+               
+            <br>
+            <h1>control</h1>
+            <br>
+                <table class="table"><thead>
+                <tr>
+                    <th scope="col">idFuncion</th>
+                    <th scope="col">id / Persona</th>
+                    <th scope="col">id / Institucion</th>
+                    <th scope="col">work description</th>
+                    <th scope="col">work period</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Funcion of funciones">
+                    <td>{{Funcion.idFuncion}}</td>
+
+                    
+                    <td *ngIf="personas[Funcion.idPersona!-1]" class="selectorcarrera tolo"
+                     (click)="cargarFuncionesPorId(Funcion.idPersona!)">
+                     {{personas[Funcion.idPersona!-1].idPersona}} / {{personas[Funcion.idPersona!-1].nombreYApellido}}
+                        <span class="tolotexto">Click here to sort Skills by this Person only</span>
+                    </td>
+                
+                    <td *ngIf="instituciones[Funcion.idInstitucion!-1]" class="alineado">
+                        {{Funcion.idInstitucion}} / {{instituciones[Funcion.idInstitucion!-1].nombreInstitucion}}</td>
+                    <td class="alineado">{{Funcion.descripcionFuncion}}</td>
+                    <td class="alineado">{{Funcion.periodoFuncion}}</td>
+                    
+
+                    <td class="alineado"><button class="btn btn-primary" routerLink="/funcdetalle/{{Funcion.idFuncion}}">See</button></td>
+                    <td class="alineado"><button class="btn btn-warning" routerLink="/funceditar/{{Funcion.idFuncion}}">Edit</button></td>
+                    <td class="alineado"><button class="btn btn-danger" (click)="onDelete(Funcion.idFuncion!)">Borrar</button></td>
+                </tr>
+            </tbody></table>
+        
+
+            <br>
+            <button class="btn btn-sucess" (click)="cargarFunciones()"> See All Work Experience</button>    
+            <br><br>
+
+            <div>
+                <button class="btn btn-sucess" routerLink="/funcnuevo">New Work Experience</button>
+            </div>
+          
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

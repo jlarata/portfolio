@@ -1,0 +1,9 @@
+.p-profile{
+    background: url(/assets/img/defrent.jpg);
+    width: 100%;
+    height: 495px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,24 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile"></div>
+        </div>
+        
+        <div class="col-sm-7">
+            <br><br><br><br>
+            <div *ngIf="institucion">
+                <p><b>id institucion:</b> {{institucion.idInstitucion}}</p><br>
+                <p><b>nombre institucion: </b>{{institucion.nombreInstitucion}}</p><br>
+                <p><b>direccion institucion: </b>{{institucion.direccionInstitucion}}</p><br>
+                <p><b>contacto tel: </b>{{institucion.contactoTel}}</p><br>
+                <p><b>contacto mail: </b>{{institucion.contactoMail}}</p><br>
+
+            </div>
+            <button class="btn btn-primary" (click)="volver()">Back</button>
+                
+        </div>
+    </div>
+    </div>
+</section>

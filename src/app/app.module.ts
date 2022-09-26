@@ -23,8 +23,18 @@ import { ListaCarreraComponent } from './carrera/lista-carrera.component';
 import { DetalleCarreraComponent } from './carrera/detalle-carrera.component';
 import { NuevoCarreraComponent } from './carrera/nuevo-carrera.component';
 import { EditarCarreraComponent } from './carrera/editar-carrera.component';
-
-
+import { ListaHabilidadComponent } from './habilidad/lista-habilidad.component';
+import { DetalleHabilidadComponent } from './habilidad/detalle-habilidad.component';
+import { NuevoHabilidadComponent } from './habilidad/nuevo-habilidad.component';
+import { EditarHabilidadComponent } from './habilidad/editar-habilidad.component';
+import { ListaInstitucionComponent } from './institucion/lista-institucion.component';
+import { DetalleInstitucionComponent } from './institucion/detalle-institucion.component';
+import { NuevoInstitucionComponent } from './institucion/nuevo-institucion.component';
+import { EditarInstitucionComponent } from './institucion/editar-institucion.component';
+import { DetalleFuncionComponent } from './funcion/detalle-funcion.component';
+import { NuevoFuncionComponent } from './funcion/nuevo-funcion.component';
+import { EditarFuncionComponent } from './funcion/editar-funcion.component';
+import { ListaFuncionComponent } from './funcion/lista-funcion.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +54,18 @@ import { EditarCarreraComponent } from './carrera/editar-carrera.component';
     DetalleCarreraComponent,
     NuevoCarreraComponent,
     EditarCarreraComponent,
+    ListaHabilidadComponent,
+    DetalleHabilidadComponent,
+    NuevoHabilidadComponent,
+    EditarHabilidadComponent,
+    ListaInstitucionComponent,
+    DetalleInstitucionComponent,
+    NuevoInstitucionComponent,
+    EditarInstitucionComponent,
+    DetalleFuncionComponent,
+    NuevoFuncionComponent,
+    EditarFuncionComponent,
+    ListaFuncionComponent,
 //    LoginComponent
   ],
   imports: [

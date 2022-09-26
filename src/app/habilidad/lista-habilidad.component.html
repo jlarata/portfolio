@@ -1,0 +1,91 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile">
+
+            </div>
+        </div>
+        <div class="col-sm-7 p-rgt-sec">
+            <div>
+                <span class="p-tag">Skills</span>
+
+                <h1 class="mt-4">Skills</h1>
+            
+                <div *ngFor="let Persona of personas">
+                    <br>
+                    <ul>
+                        <li class="cada">
+                            <h3><img src="assets/img/rm_arw_rgt.png" width="15"/>{{Persona.nombreYApellido}}
+                            </h3>
+                        </li>
+                        
+                        <div *ngFor="let Habilidad of habilidades">
+                            <ul>
+                                <div *ngIf="Persona.nombreYApellido==personas[Habilidad.idPersona!-1].nombreYApellido"
+                                class="cada">
+
+                                    <li><h5><img src="assets/img/rm_arw_rgt.png" width="15"/>Skill Name: {{Habilidad.nombreHabilidad}}</h5>
+                                    </li>
+                                    <li class="cada">Skill Type:
+                                    {{Habilidad.tipoHabilidad}}
+                                    </li>
+                                    <li class="cada">Skill Level: 
+                                    {{Habilidad.nivelHabilidad}}
+                                    </li>
+                                </div> 
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+
+
+                
+            <br>
+            <h1>control</h1>
+            <br>
+                <table class="table"><thead>
+                <tr>
+                    <th scope="col">IDhabilidad</th>
+                    <th scope="col">IDpersona</th>
+                    <th scope="col">skill name</th>
+                    <th scope="col">skill type</th>
+                    <th scope="col">skill lvl</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Habilidad of habilidades">
+                    <td>{{Habilidad.idHabilidad}}</td>
+
+                    <td *ngIf="personas[Habilidad.idPersona!-1]" class="selectorcarrera tolo"
+                     (click)="cargarHabilidadesPorId(Habilidad.idPersona!)">{{personas[Habilidad.idPersona!-1].nombreYApellido}}
+                        <span class="tolotexto">Click here to sort Skills by this Person only</span>
+                    </td>
+                
+                    <td class="alineado">{{Habilidad.nombreHabilidad}}</td>
+                    <td class="alineado">{{Habilidad.tipoHabilidad}}</td>
+                    <td class="alineado">{{Habilidad.nivelHabilidad}}</td>
+                    
+
+                    <td class="alineado"><button class="btn btn-primary" routerLink="/habidetalle/{{Habilidad.idHabilidad}}">See</button></td>
+                    <td class="alineado"><button class="btn btn-warning" routerLink="/habieditar/{{Habilidad.idHabilidad}}">Edit</button></td>
+                    <td class="alineado"><button class="btn btn-danger" (click)="onDelete(Habilidad.idHabilidad!)">Borrar</button></td>
+                </tr>
+            </tbody></table>
+            <br>
+            <button class="btn btn-sucess" (click)="cargarHabilidades()"> See All Skills</button>    
+            <br><br>
+
+            <div>
+                <button class="btn btn-sucess" routerLink="/habinuevo">New Skills</button>
+            </div>
+          
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

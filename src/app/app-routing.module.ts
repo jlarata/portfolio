@@ -17,6 +17,18 @@ import { ListaCarreraComponent } from './carrera/lista-carrera.component';
 import { DetalleCarreraComponent } from './carrera/detalle-carrera.component';
 import { NuevoCarreraComponent } from './carrera/nuevo-carrera.component';
 import { EditarCarreraComponent } from './carrera/editar-carrera.component';
+import { ListaHabilidadComponent } from './habilidad/lista-habilidad.component';
+import { DetalleHabilidadComponent } from './habilidad/detalle-habilidad.component';
+import { EditarHabilidadComponent } from './habilidad/editar-habilidad.component';
+import { NuevoHabilidadComponent } from './habilidad/nuevo-habilidad.component';
+import { NuevoInstitucionComponent } from './institucion/nuevo-institucion.component';
+import { EditarInstitucionComponent } from './institucion/editar-institucion.component';
+import { ListaInstitucionComponent } from './institucion/lista-institucion.component';
+import { DetalleInstitucionComponent } from './institucion/detalle-institucion.component';
+import { DetalleFuncionComponent } from './funcion/detalle-funcion.component';
+import { NuevoFuncionComponent } from './funcion/nuevo-funcion.component';
+import { ListaFuncionComponent } from './funcion/lista-funcion.component';
+import { EditarFuncionComponent } from './funcion/editar-funcion.component';
 
 //import { LoginComponent } from './login/login.component';
 
@@ -98,6 +110,54 @@ const routes: Routes = [
     {
         path: 'carreditar/:id',
         component: EditarCarreraComponent
+    },
+    {
+        path: 'habilista',
+        component: ListaHabilidadComponent
+    },
+    {
+        path: 'habidetalle/:id',
+        component: DetalleHabilidadComponent
+    },
+    {
+        path: 'habinuevo',
+        component: NuevoHabilidadComponent
+    },
+    {
+        path: 'habieditar/:id',
+        component: EditarHabilidadComponent
+    },
+    {
+        path: 'instlista',
+        component: ListaInstitucionComponent
+    },
+    {
+        path: 'instdetalle/:id',
+        component: DetalleInstitucionComponent
+    },
+    {
+        path: 'instnuevo',
+        component: NuevoInstitucionComponent
+    },
+    {
+        path: 'insteditar/:id',
+        component: EditarInstitucionComponent
+    },
+    {
+        path: 'funclista',
+        component: ListaFuncionComponent
+    },
+    {
+        path: 'funcdetalle/:id',
+        component: DetalleFuncionComponent
+    },
+    {
+        path: 'funcnuevo',
+        component: NuevoFuncionComponent
+    },
+    {
+        path: 'funceditar/:id',
+        component: EditarFuncionComponent
     }
 //    {
 //        path: 'login',

@@ -1,0 +1,54 @@
+<section>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile">
+
+            </div>
+        </div>
+        <div class="col-sm-7 p-rgt-sec">
+            <div>
+                            
+            <br>
+            <h1>control</h1>
+            <br>
+                <table class="table"><thead>
+                <tr>
+                    <th scope="col">id institucion</th>
+                    <th scope="col">nombre institucion</th>
+                    <th scope="col">direccion institucion</th>
+                    <th scope="col">Contacto Mail</th>
+                    <th scope="col">Contacto Teléfono</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Institucion of instituciones">
+                    <td class="alineado">{{Institucion.idInstitucion}}</td>
+                    <td class="alineado">{{Institucion.nombreInstitucion}}</td>
+                    <td class="alineado">{{Institucion.direccionInstitucion}}</td>
+                    <td class="alineado">{{Institucion.contactoTel}}</td>
+                    <td class="alineado">{{Institucion.contactoMail}}</td>
+                 
+
+                    <td class="alineado"><button class="btn btn-primary" routerLink="/instdetalle/{{Institucion.idInstitucion}}">See</button></td>
+                    <td class="alineado"><button class="btn btn-warning" routerLink="/insteditar/{{Institucion.idInstitucion}}">Edit</button></td>
+                    <td class="alineado"><button class="btn btn-danger" (click)="onDelete(Institucion.idInstitucion!)">Delete</button></td>
+                </tr>
+            </tbody></table>
+            <br>
+            <button class="btn btn-sucess" (click)="cargarInstituciones()"> See All Institutions</button>    
+            <br><br>
+
+            <div>
+                <button class="btn btn-sucess" routerLink="/instnuevo">New Institutions</button>
+            </div>
+          
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
