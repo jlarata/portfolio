@@ -3,12 +3,12 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-5">
-            <div class="p-profile">
+            <div *ngIf="user !== 'admin'" class="p-profile">
 
             </div>
         </div>
         <div class="col-sm-7 p-rgt-sec">
-            <div>
+            <div><div *ngIf="user !== 'admin'">
                 <span class="p-tag">Work Experience</span>
 
                 <h1 class="mt-4">Work Experience</h1>
@@ -37,13 +37,14 @@
                         </div>
                     </ul>
                 </div>
+                </div>
 
 
                
             <br>
-            <h1>control</h1>
+            <h1 *ngIf="user === 'admin'">panel de control exp. laboral (incluye botón de creación de instituciones / componente oculto)</h1>
             <br>
-                <table class="table"><thead>
+                <table *ngIf="user === 'admin'" class="table"><thead>
                 <tr>
                     <th scope="col">idFuncion</th>
                     <th scope="col">id / Persona</th>
@@ -80,11 +81,16 @@
         
 
             <br>
-            <button class="btn btn-sucess" (click)="cargarFunciones()"> See All Work Experience</button>    
+            <button *ngIf="user === 'admin'" class="btn btn-sucess" (click)="cargarFunciones()"> See All Work Experience</button>    
             <br><br>
 
             <div>
-                <button class="btn btn-sucess" routerLink="/funcnuevo">New Work Experience</button>
+                <button *ngIf="user === 'admin'" class="btn btn-sucess" routerLink="/funcnuevo">New Work Experience</button>
+            </div><br>
+
+            
+            <div>
+                <button *ngIf="user === 'admin'" class="btn btn-sucess" routerLink="/instilista">New Institution</button>
             </div>
           
             </div>

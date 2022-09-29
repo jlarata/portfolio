@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Habilidad } from '../models/habilidad';
 import { HabilidadService } from '../services/habilidad.service';
 
@@ -13,6 +13,8 @@ import { identity } from 'rxjs';
 })
 
 export class ListaHabilidadComponent implements OnInit {
+
+  @Input() user: string;
  
 
   habilidades: Habilidad[] = [];

@@ -3,12 +3,12 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-5">
-            <div class="p-profile">
+            <div *ngIf="user !== 'admin'" class="p-profile">
 
             </div>
         </div>
         <div class="col-sm-7 p-rgt-sec">
-            <div>
+            <div><div *ngIf="user !== 'admin'">
                 <span class="p-tag">Skills</span>
 
                 <h1 class="mt-4">Skills</h1>
@@ -39,13 +39,14 @@
                         </div>
                     </ul>
                 </div>
+                </div>  
 
 
                 
             <br>
-            <h1>control</h1>
+            <h1 *ngIf="user === 'admin'">panel de control de habilidades</h1>
             <br>
-                <table class="table"><thead>
+                <table *ngIf="user === 'admin'" class="table"><thead>
                 <tr>
                     <th scope="col">IDhabilidad</th>
                     <th scope="col">IDpersona</th>
@@ -77,11 +78,11 @@
                 </tr>
             </tbody></table>
             <br>
-            <button class="btn btn-sucess" (click)="cargarHabilidades()"> See All Skills</button>    
+            <button *ngIf="user === 'admin'" class="btn btn-sucess" (click)="cargarHabilidades()"> See All Skills</button>    
             <br><br>
 
             <div>
-                <button class="btn btn-sucess" routerLink="/habinuevo">New Skills</button>
+                <button *ngIf="user === 'admin'" class="btn btn-sucess" routerLink="/habinuevo">New Skills</button>
             </div>
           
             </div>

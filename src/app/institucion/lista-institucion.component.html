@@ -3,7 +3,7 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-5">
-            <div class="p-profile">
+            <div *ngIf="user !== 'admin'" class="p-profile">
 
             </div>
         </div>
@@ -11,9 +11,10 @@
             <div>
                             
             <br>
-            <h1>control</h1>
+            <h1 *ngIf="user === 'admin'">panel de control instituciones </h1>
+            <h1 *ngIf="user === 'admin'">componente oculto, necesario para el select*join de estudios realizados.  </h1>
             <br>
-                <table class="table"><thead>
+                <table *ngIf="user === 'admin'" class="table"><thead>
                 <tr>
                     <th scope="col">id institucion</th>
                     <th scope="col">nombre institucion</th>
@@ -40,11 +41,11 @@
                 </tr>
             </tbody></table>
             <br>
-            <button class="btn btn-sucess" (click)="cargarInstituciones()"> See All Institutions</button>    
+            <button *ngIf="user === 'admin'" class="btn btn-sucess" (click)="cargarInstituciones()"> See All Institutions</button>    
             <br><br>
 
             <div>
-                <button class="btn btn-sucess" routerLink="/instnuevo">New Institutions</button>
+                <button *ngIf="user === 'admin'" class="btn btn-sucess" routerLink="/instnuevo">New Institutions</button>
             </div>
           
             </div>

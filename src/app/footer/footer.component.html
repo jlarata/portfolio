@@ -1,0 +1,57 @@
+
+    
+<!-- esta caja fue usada para el desarrollo, muestra la información de logeo/token todo el tiempo
+    <div *ngIf="info.token">
+    <div class="container">
+        <p><strong>Your username: </strong>{{info.nombreUsuario}}</p>
+        <p><strong>This is the token: </strong> {{info.token}} </p>
+        <p><strong>Your privileges: </strong> {{info.authorities}} </p>
+    </div>
+</div>-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="">Home</a>
+                </li>
+                <li *ngIf="!isLogin" class="nav-item">
+                    <a class="nav-link" routerLink="login">Log in</a>
+                </li>
+                <li *ngIf="authority === 'user'" class="nav-item">
+                    <a class="nav-link" routerLink="usuario">User Panel</a>
+                </li>
+                <li *ngIf="authority === 'admin'" class="nav-item">
+                    <a class="nav-link" routerLink="admin">Admin Panel</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" routerLink="lista">Lista</a>
+                </li>-->
+                <li *ngIf="isLogin" class="nav-item">
+                    <a class="nav-link" (click)="logOut()" style="cursor: pointer;">Log out</a>
+                </li>
+                 <li *ngIf="!isLogin" class="nav-item">
+                    <div class="nav-link">Not logged</div>
+                </li>
+            </ul>
+        </div>
+
+        
+
+    </nav>
+
+
+<!-- acá luego de info.token decía ";else loggedout. me gusta más mi solución"-->
+
+
+<!-- me gusta más mi solución
+<ng-template #loggedOut>
+    <div class="container">
+        Not logged.
+    </div>
+</ng-template>-->

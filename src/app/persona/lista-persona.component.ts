@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PersonaService } from '../services/persona.service'; 
 import { Persona } from '../models/persona'; 
 
@@ -9,6 +9,8 @@ import { Persona } from '../models/persona';
 })
 
 export class ListaPersonaComponent implements OnInit {
+
+  @Input() user: string;
 
   //array de personas
   

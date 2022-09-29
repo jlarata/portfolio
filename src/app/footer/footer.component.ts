@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenService } from './services/token.service';
+import { TokenService } from '../services/token.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
+export class FooterComponent implements OnInit {
 
-export class AppComponent implements OnInit {
+  info: any = {};
+
   isLogin = false;
   roles: string[];
   authority: string;
-  
-  title = 'portfolio';
 
   constructor(private tokenService: TokenService, private router: Router) {}
 
+
   ngOnInit() {
+
     if (this.tokenService.getToken()) {
       this.isLogin = true;
       this.roles = [];
@@ -31,6 +33,13 @@ export class AppComponent implements OnInit {
         return true;
       });
     }
+
+
+    this.info = {
+      token: this.tokenService.getToken(),
+      nombreUsuario: this.tokenService.getUserName(),
+      authorities: this.tokenService.getAuthorities()
+    };
   }
 
   logOut(): void {

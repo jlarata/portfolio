@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductoService } from '../services/producto.service';
 import { Producto } from '../models/producto';
 
@@ -9,6 +9,8 @@ import { Producto } from '../models/producto';
 })
 
 export class ListaProductoComponent implements OnInit {
+
+  @Input() user: string;
 
   //array de productos
   productos: Producto[] = [];

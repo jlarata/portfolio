@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Funcion } from '../models/funcion';
 import { FuncionService } from '../services/funcion.service';
 
@@ -15,6 +15,8 @@ import { identity } from 'rxjs';
 })
 
 export class ListaFuncionComponent implements OnInit {
+
+  @Input() user: string;
  
 
   funciones: Funcion[] = [];

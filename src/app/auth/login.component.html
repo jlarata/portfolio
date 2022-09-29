@@ -1,0 +1,47 @@
+<!--si no se ha hecho login se muestra la plantilla loggedout
+si hay herror (si el formulario rest devolvió error al formulario) se muestra la capa
+donde aparece el mensaje del error-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile">
+
+            </div>
+        </div>
+    <div class="col">
+
+<div *ngIf="isLogged; else loggedOut">
+<p>Succefully logged in with {{ roles }} user privileges.</p>
+<p>Navigate the site or, if you have ROLE_ADMIN privileges, check bottom navigation bar: Admin panel.</p>
+</div>
+
+
+
+
+<ng-template #loggedOut>
+    <div *ngIf="!isLogged" class="container">
+        <h5>Log in</h5>
+        <form name="form" #f="ngForm" novalidate (ngSubmit)="onLogin()">
+            <div class="form-group">
+                <label for="nombreUsuario">User name: </label>
+                <input type="text" class="form-control" name="nombreusuario" [(ngModel)]="form.nombreUsuario" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="form.password" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" [disabled]="!f.valid">Login</button>
+                <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">login fail: {{ errorMsg }}</div>
+            
+
+
+            <a routerLink="/registro"><button class="btn btn-primary float-right">Create Account</button></a>
+            </div>
+        </form>
+    </div>
+</ng-template>
+        </div>
+    </div>
+</div>

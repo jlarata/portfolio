@@ -17,8 +17,8 @@
                     <th scope="col">Name</th>
                     <th scope="col">Cost</th>
                     <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th *ngIf="user === 'admin'" scope="col"></th>
+                    <th *ngIf="user === 'admin'" scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -29,11 +29,11 @@
 <!-- importantísima la barrita antes de la dirección en routerlink-->
 <!-- si algo falla acá, revisar el path en routing module. i.e. los dos puntitos en detalle/:id -->
                     <td><button class="btn btn-primary" routerLink="/proddetalle/{{Producto.id}}">See</button></td>
-                    <td><button class="btn btn-warning" routerLink="/prodeditar/{{Producto.id}}">Edit</button></td>
-                    <td><button class="btn btn-danger" (click)="onDelete(Producto.id!)">Borrar</button></td>
+                    <td *ngIf="user === 'admin'"><button class="btn btn-warning" routerLink="/prodeditar/{{Producto.id}}">Edit</button></td>
+                    <td *ngIf="user === 'admin'"><button class="btn btn-danger" (click)="onDelete(Producto.id!)">Borrar</button></td>
                 </tr>
             </tbody></table>
-            <div><button class="btn btn-sucess btn-lg" routerLink="/prodnuevo">Nuevo Producto</button></div>
+            <div *ngIf="user === 'admin'"><button class="btn btn-sucess btn-lg" routerLink="/prodnuevo">Nuevo Producto</button></div>
                 <ul>
                     <li *ngFor="let Producto of productos">
                         <div class="cada"><div class="una">{{Producto.nombreProducto}}</div> <div class="una"> precio: {{Producto.precio}}</div></div>

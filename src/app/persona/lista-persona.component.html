@@ -3,7 +3,7 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-5">
-            <div class="p-profile">
+            <div *ngIf="user !== 'admin'" class="p-profile">
 
             </div>
         </div>
@@ -12,8 +12,10 @@
                 <span class="p-tag">home</span>
 
                 <!-- esto era un título <h1 *ngIf="personas[0]" class="mt-4">{{personas[0].nombreYApellido}}</h1>-->
-                <h1>d3c's portfolio</h1>
+                
 
+                <div  *ngIf="user !== 'admin'">
+                    <h1>d3c's portfolio</h1>
                 <ul *ngFor="let Persona of personas, let i = index;">
                     <br>
                     <li class="cada">
@@ -35,15 +37,15 @@
                         {{Persona.domicilio}}</h5>
                     </li>
                     
-                </ul>
+                </ul></div>
                 
                 
-                <a href="#" class="p-readmore">Read more <img src="assets/img/rm_arw_rgt.png" alt="Read More"
-                    width="15" class="ml-2"/></a>
+                <!-- no va más <a href="#" class="p-readmore">Read more <img src="assets/img/rm_arw_rgt.png" alt="Read More"
+                    width="15" class="ml-2"/></a> -->
                 
                 <br><br>
-                <h1>control</h1>
-                <table class="table"><thead>
+                <h1 *ngIf="user === 'admin'">panel de control personas</h1>
+                <table *ngIf="user === 'admin'" class="table"><thead>
                     <tr>
                         <th class="alineado" scope="col">ID</th>
                         <th class="alineado" scope="col">Name</th>
@@ -68,7 +70,7 @@
                     </tr>
                 </tbody></table>
                 <div>
-                    <button class="btn btn-sucess" routerLink="/persnuevo">Nueva Persona</button>
+                    <button *ngIf="user === 'admin'" class="btn btn-sucess" routerLink="/persnuevo">Nueva Persona</button>
                 </div>
 
 

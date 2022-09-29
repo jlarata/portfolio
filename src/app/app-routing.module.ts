@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+
+import { LoginComponent } from './auth/login.component';
+import { AdminComponent } from './users/admin.component';
+import { UserComponent } from './users/user.component';
+import { GuardService as guard } from './guards/guard.service';
+
 import { HomeComponent } from './home/home.component';
 import { WExpComponent } from './w-exp/w-exp.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -30,11 +37,18 @@ import { NuevoFuncionComponent } from './funcion/nuevo-funcion.component';
 import { ListaFuncionComponent } from './funcion/lista-funcion.component';
 import { EditarFuncionComponent } from './funcion/editar-funcion.component';
 
-//import { LoginComponent } from './login/login.component';
+
+
 
 const routes: Routes = [
     {
         path: '', redirectTo: '/home', pathMatch: 'full'
+    },
+    {
+        path: 'admin', component: AdminComponent, canActivate: [guard], data: {expectedRol: ['admin']}
+    },
+    {
+        path: 'user', component: UserComponent, canActivate: [guard], data: {expectedRol: ['user']}
     },
     //{
     //    path: 'home',
@@ -69,15 +83,18 @@ const routes: Routes = [
     },
     {
         path: 'proddetalle/:id',
-        component: DetalleProductoComponent
+        component: DetalleProductoComponent,
+        canActivate: [guard], data: {expectedRol: ['admin', 'user']}
     },
     {
         path: 'prodnuevo',
-        component: NuevoProductoComponent
+        component: NuevoProductoComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'prodeditar/:id',
-        component: EditarProductoComponent
+        component: EditarProductoComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'perslista',
@@ -85,15 +102,18 @@ const routes: Routes = [
     },
     {
         path: 'persdetalle/:id',
-        component: DetallePersonaComponent
+        component: DetallePersonaComponent,
+        canActivate: [guard], data: {expectedRol: ['admin', 'user']}
     },
     {
         path: 'persnuevo',
-        component: NuevoPersonaComponent
+        component: NuevoPersonaComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'perseditar/:id',
-        component: EditarPersonaComponent
+        component: EditarPersonaComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'carrlista',
@@ -101,15 +121,18 @@ const routes: Routes = [
     },
     {
         path: 'carrdetalle/:id',
-        component: DetalleCarreraComponent
+        component: DetalleCarreraComponent,
+        canActivate: [guard], data: {expectedRol: ['admin', 'user']}
     },
     {
         path: 'carrnuevo',
-        component: NuevoCarreraComponent
+        component: NuevoCarreraComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'carreditar/:id',
-        component: EditarCarreraComponent
+        component: EditarCarreraComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'habilista',
@@ -117,15 +140,18 @@ const routes: Routes = [
     },
     {
         path: 'habidetalle/:id',
-        component: DetalleHabilidadComponent
+        component: DetalleHabilidadComponent,
+        canActivate: [guard], data: {expectedRol: ['admin', 'user']}
     },
     {
         path: 'habinuevo',
-        component: NuevoHabilidadComponent
+        component: NuevoHabilidadComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'habieditar/:id',
-        component: EditarHabilidadComponent
+        component: EditarHabilidadComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'instlista',
@@ -133,15 +159,18 @@ const routes: Routes = [
     },
     {
         path: 'instdetalle/:id',
-        component: DetalleInstitucionComponent
+        component: DetalleInstitucionComponent,
+        canActivate: [guard], data: {expectedRol: ['admin', 'user']}
     },
     {
         path: 'instnuevo',
-        component: NuevoInstitucionComponent
+        component: NuevoInstitucionComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'insteditar/:id',
-        component: EditarInstitucionComponent
+        component: EditarInstitucionComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'funclista',
@@ -149,20 +178,23 @@ const routes: Routes = [
     },
     {
         path: 'funcdetalle/:id',
-        component: DetalleFuncionComponent
+        component: DetalleFuncionComponent,
+        canActivate: [guard], data: {expectedRol: ['admin', 'user']}
     },
     {
         path: 'funcnuevo',
-        component: NuevoFuncionComponent
+        component: NuevoFuncionComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
     },
     {
         path: 'funceditar/:id',
-        component: EditarFuncionComponent
+        component: EditarFuncionComponent,
+        canActivate: [guard], data: {expectedRol: ['admin']}
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
-//    {
-//        path: 'login',
-//        component: LoginComponent
-//    }
 ];
 
 @NgModule({

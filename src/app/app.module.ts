@@ -8,6 +8,18 @@ import { HomeComponent } from './home/home.component';
 import { RelSkillsComponent } from './rel-skills/rel-skills.component';
 //import { LoginComponent } from './login/login.component';
 
+import { LoginComponent } from './auth/login.component';
+import { FooterComponent } from './footer/footer.component';
+import { UserComponent } from './users/user.component';
+import { AdminComponent } from './users/admin.component';
+
+import { interceptorProvider } from './interceptors/producto-interceptor.service';
+import { CarreraInterceptorProvider } from './interceptors/carrera-interceptor.service';
+import { FuncionInterceptorProvider } from './interceptors/funcion-interceptor.service';
+import { HabilidadInterceptorProvider } from './interceptors/habilidad-interceptor.service';
+import { InstitucionInterceptorProvider } from './interceptors/institucion-interceptor.service';
+import { PersonaInterceptorProvider } from './interceptors/persona-interceptor.service';
+
 //módulos para el cliente http y los formularios:
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,6 +47,7 @@ import { DetalleFuncionComponent } from './funcion/detalle-funcion.component';
 import { NuevoFuncionComponent } from './funcion/nuevo-funcion.component';
 import { EditarFuncionComponent } from './funcion/editar-funcion.component';
 import { ListaFuncionComponent } from './funcion/lista-funcion.component';
+
 
 @NgModule({
   declarations: [
@@ -66,6 +79,10 @@ import { ListaFuncionComponent } from './funcion/lista-funcion.component';
     NuevoFuncionComponent,
     EditarFuncionComponent,
     ListaFuncionComponent,
+    LoginComponent,
+    FooterComponent,
+    UserComponent,
+    AdminComponent,
 //    LoginComponent
   ],
   imports: [
@@ -75,7 +92,12 @@ import { ListaFuncionComponent } from './funcion/lista-funcion.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [interceptorProvider,
+  CarreraInterceptorProvider,
+  FuncionInterceptorProvider,
+  HabilidadInterceptorProvider,
+  InstitucionInterceptorProvider,
+  PersonaInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

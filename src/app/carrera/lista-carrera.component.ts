@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CarreraService } from '../services/carrera.service';
 import { Carrera } from '../models/carrera';
 import { Persona } from '../models/persona';
@@ -12,6 +12,8 @@ import { identity } from 'rxjs';
 })
 
 export class ListaCarreraComponent implements OnInit {
+
+  @Input() user: string;
  
 
   carreras: Carrera[] = [];

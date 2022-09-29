@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Institucion } from '../models/institucion';
 import { InstitucionService } from '../services/institucion.service';
 
@@ -12,6 +12,8 @@ import { identity } from 'rxjs';
 })
 
 export class ListaInstitucionComponent implements OnInit {
+
+  @Input() user: string;
  
 
   instituciones: Institucion[] = [];

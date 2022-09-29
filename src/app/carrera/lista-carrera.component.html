@@ -3,12 +3,12 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-5">
-            <div class="p-profile">
+            <div *ngIf="user !== 'admin'" class="p-profile">
 
             </div>
         </div>
         <div class="col-sm-7 p-rgt-sec">
-            <div>
+            <div><div *ngIf="user !== 'admin'">
                 <span class="p-tag">Education</span>
 
                 <h1 class="mt-4">Education</h1>
@@ -42,6 +42,7 @@
                         </div>
                     </ul>
                 </div>
+                </div>
 
 
                 
@@ -67,9 +68,9 @@
                 </ul>
             </div>--> 
             <br>
-            <h1>control</h1>
+            <h1 *ngIf="user === 'admin'">panel de control de estudios realizados</h1>
             <br>
-                <table class="table"><thead>
+                <table *ngIf="user === 'admin'" class="table"><thead>
                 <tr>
                     <th scope="col">IDcarrera</th>
                     <th scope="col">IDpersona</th>
@@ -102,12 +103,16 @@
                 </tr>
             </tbody></table>
             <br>
-            <button class="btn btn-sucess" (click)="cargarCarreras()"> See All Studies</button>    
+            <button *ngIf="user === 'admin'" class="btn btn-sucess" (click)="cargarCarreras()"> See All Studies</button>    
             <br><br>
 
             <div>
-                <button class="btn btn-sucess" routerLink="/carrnuevo">New Studies</button>
+                <button *ngIf="user === 'admin'" class="btn btn-sucess" routerLink="/carrnuevo">New Studies</button>
             </div>
+
+ 
+
+
             <!--    <ul *ngFor="let Carrera of carreras">
                     <li> {{Carrera.idCarrera}}</li>
                     <li class="cada">{{Carrera.idPersona}}</li>
