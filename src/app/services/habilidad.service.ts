@@ -12,7 +12,7 @@ export class HabilidadService {
 
 
   //habilidadURL = 'http://localhost:8080/api/habilidad/'
-  habilidadURL = 'httpshttps://fspf.herokuapp.com/api/habilidad/'
+  habilidadURL = 'https://fspf.herokuapp.com/api/habilidad/'
   
 
   constructor(private httpClient: HttpClient) { }
