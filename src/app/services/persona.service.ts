@@ -14,7 +14,9 @@ export class PersonaService {
 
   //esto es una cadena que contiene la ruta del servicio.
   // &#39 es apóstrofe.
-  personaURL = 'http://localhost:8080/api/personas/'
+  //personaURL = 'http://localhost:8080/api/personas/'
+  personaURL = 'https://fspf.herokuapp.com/api/personas/'
+  
 
   // algo acá se está rompiendo. el original luego de productos/ tiene &#39;;. si le pongo eso no habilita la CORS.
   //pero si no se lo pongo no sale nada.

@@ -11,7 +11,8 @@ const cabecera = {headers : new HttpHeaders({'Content-Type': 'application/json'}
 export class CarreraService {
 
 
-  carreraURL = 'http://localhost:8080/api/carrera/'
+  //carreraURL = 'http://localhost:8080/api/carrera/
+  carreraURL = 'https://fspf.herokuapp.com/api/carrera/'
 
   constructor(private httpClient: HttpClient) { }
 

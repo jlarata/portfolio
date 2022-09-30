@@ -13,7 +13,8 @@ const cabecera = {headers: new HttpHeaders({'Content-Type': 'application/json'})
 })
 export class AuthService {
 
-  private authURL = 'http://localhost:8080/api/auth/';
+  private authURL = 'https://fspf.herokuapp.com/api/auth/'
+  //private authURL = 'http://localhost:8080/api/auth/';
   //mismo problema de siempre &#39;; => '; aparentemente
 
   constructor(private httpClient: HttpClient) { }

@@ -14,7 +14,9 @@ export class ProductoService {
 
   //esto es una cadena que contiene la ruta del servicio.
   // &#39 es apóstrofe.
-  productoURL = 'http://localhost:8080/api/productos/'
+  //productoURL = 'http://localhost:8080/api/productos/'
+  productoURL = 'https://fspf.herokuapp.com/api/productos/'
+  
 
   // algo acá se está rompiendo. el original luego de productos/ tiene &#39;;. si le pongo eso no habilita la CORS.
   //pero si no se lo pongo no sale nada.

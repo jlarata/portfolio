@@ -11,7 +11,9 @@ const cabecera = {headers : new HttpHeaders({'Content-Type': 'application/json'}
 export class InstitucionService {
 
 
-  institucionURL = 'http://localhost:8080/api/institucion/'
+  //institucionURL = 'http://localhost:8080/api/institucion/'
+  institucionURL = 'https://fspf.herokuapp.com/api/institucion/'
+  
 
   constructor(private httpClient: HttpClient) { }
 

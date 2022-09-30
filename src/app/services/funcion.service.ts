@@ -10,8 +10,9 @@ const cabecera = {headers : new HttpHeaders({'Content-Type': 'application/json'}
 })
 export class FuncionService {
 
-
-  funcionURL = 'http://localhost:8080/api/funcion/'
+  
+  //funcionURL = 'http://localhost:8080/api/funcion/'
+  funcionURL = 'https://fspf.herokuapp.com/api/funcion/'
 
   constructor(private httpClient: HttpClient) { }
 
