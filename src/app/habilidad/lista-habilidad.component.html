@@ -12,6 +12,8 @@
                 <span class="p-tag">Skills</span>
 
                 <h1 class="mt-4">Skills</h1>
+
+                <h4 *ngIf="user !== 'admin' && user !== 'user'"> please <a routerLink="/login">log in</a> to navigate this site</h4>
             
                 <div *ngFor="let Persona of personas">
                     <br>

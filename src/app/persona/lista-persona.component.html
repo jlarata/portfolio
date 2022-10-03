@@ -16,6 +16,10 @@
 
                 <div  *ngIf="user !== 'admin'">
                     <h1>d3c's portfolio</h1>
+
+                <h4 *ngIf="user !== 'admin' && user !== 'user'"> please <a routerLink="/login">log in</a> to navigate this site</h4>
+                
+                
                 <ul *ngFor="let Persona of personas, let i = index;">
                     <br>
                     <li class="cada">

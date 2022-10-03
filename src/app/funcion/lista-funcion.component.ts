@@ -21,7 +21,7 @@ export class ListaFuncionComponent implements OnInit {
 
   funciones: Funcion[] = [];
   personas: Persona[] = [];
-  instituciones: Institucion[];
+  instituciones: Institucion[] = [];
 
   data: any;
   datap: any;
