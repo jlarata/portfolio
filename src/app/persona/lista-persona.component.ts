@@ -17,6 +17,7 @@ export class ListaPersonaComponent implements OnInit {
   personatitulo: String = "Ariel Wasserman";
   personas: Persona[] = [];
   
+  
   data: any;
   stringdepersonas: String = 'lalala';
 

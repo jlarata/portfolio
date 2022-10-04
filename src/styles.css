@@ -65,3 +65,54 @@ h1{
     position: absolute;
     z-index: -1;
 }
+
+.p-profile {
+    width: 100%;
+    height: 450px; 
+    margin-bottom: 5rem;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .5s ease;
+    
+}
+
+.i-profile {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        resize: horizontal;
+        filter: hue-rotate(180deg) blur(2px);
+        transition: .5s ease;
+        border-radius: 5%;
+        box-shadow: 4px 4px 4px 2px rgba(6, 9, 10, 0.5);
+    }
+
+
+.i-profile:hover {
+    opacity: 0.6;    
+    height: 440px;
+    width: 98%;
+    filter: hue-rotate(100deg) blur(1px);
+    border: solid 2px blue;
+}
+
+.p-profile:hover .middle {
+    opacity: 1;
+    top: -80%;
+    left: 90%;
+}
+
+.middle {
+    color: #5a033e;
+    font-weight: bold;
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    box-shadow: none;
+  }

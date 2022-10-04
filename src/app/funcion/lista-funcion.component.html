@@ -4,6 +4,8 @@
     <div class="row">
         <div class="col-sm-5">
             <div *ngIf="user !== 'admin'" class="p-profile">
+                <img src="assets/img/defrent.jpg" class="i-profile"/> 
+            <h1 class="middle">d3c's portfolio</h1>
 
             </div>
         </div>
@@ -12,8 +14,6 @@
                 <span class="p-tag">Work Experience</span>
 
                 <h1 class="mt-4">Work Experience</h1>
-
-                <h4 *ngIf="user !== 'admin' && user !== 'user'"> please <a routerLink="/login">log in</a> to navigate this site</h4>
             
                 <div *ngFor="let Persona of personas">
                     <br>
@@ -32,14 +32,22 @@
                                     </li>
                                     <li class="cada">{{Funcion.periodoFuncion}}
                                     </li>
-                                    <li *ngIf="instituciones" class="cada">{{instituciones[Funcion.idInstitucion!-1].nombreInstitucion}}
+                                    <li *ngIf="instituciones[Funcion.idInstitucion!-1]" class="cada">{{instituciones[Funcion.idInstitucion!-1].nombreInstitucion!}}
                                     </li>
+
                                 </div> 
                             </ul>
                         </div>
                     </ul>
                 </div>
                 </div>
+
+                <div *ngIf="personas[0]?.idPersona; else loguerino">
+                    
+                </div>
+                <ng-template #loguerino>
+                    <h4> please <a routerLink="/login">log in</a> to navigate this site</h4>
+                </ng-template>
 
 
                
@@ -70,7 +78,7 @@
                     </td>
                 
                     <td *ngIf="instituciones[Funcion.idInstitucion!-1]" class="alineado">
-                        {{Funcion.idInstitucion}} / {{instituciones[Funcion.idInstitucion!-1].nombreInstitucion}}</td>
+                        {{Funcion.idInstitucion}} / {{instituciones[Funcion.idInstitucion!-1].nombreInstitucion!}}</td>
                     <td class="alineado">{{Funcion.descripcionFuncion}}</td>
                     <td class="alineado">{{Funcion.periodoFuncion}}</td>
                     

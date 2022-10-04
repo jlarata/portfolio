@@ -1,6 +1,6 @@
 export class Institucion {
     idInstitucion?: number;
-    nombreInstitucion: string;
+    nombreInstitucion?: string;
     direccionInstitucion: string;
     contactoTel: string;
     contactoMail: string;

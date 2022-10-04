@@ -1,7 +1,6 @@
 menu > div, ul {
     display: flex;
     justify-content: space-around;
-    font-style: oblique;
     text-decoration: none;
     font-size: 22px;
 }

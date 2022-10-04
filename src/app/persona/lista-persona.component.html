@@ -4,21 +4,17 @@
     <div class="row">
         <div class="col-sm-5">
             <div *ngIf="user !== 'admin'" class="p-profile">
-
+                <img src="assets/img/defrent.jpg" class="i-profile"/> 
+                <h1 class="middle">d3c's portfolio</h1>
             </div>
         </div>
         <div class="col-sm-7 p-rgt-sec">
             <div>
-                <span class="p-tag">home</span>
-
-                <!-- esto era un título <h1 *ngIf="personas[0]" class="mt-4">{{personas[0].nombreYApellido}}</h1>-->
+                <span class="p-tag">home</span>      
                 
+           
 
-                <div  *ngIf="user !== 'admin'">
-                    <h1>d3c's portfolio</h1>
 
-                <h4 *ngIf="user !== 'admin' && user !== 'user'"> please <a routerLink="/login">log in</a> to navigate this site</h4>
-                
                 
                 <ul *ngFor="let Persona of personas, let i = index;">
                     <br>
@@ -41,7 +37,16 @@
                         {{Persona.domicilio}}</h5>
                     </li>
                     
-                </ul></div>
+                </ul>
+
+                <div *ngIf="personas[0]?.idPersona; else loguerino">
+                    
+                </div>
+                <ng-template #loguerino>
+                    <h4> please <a routerLink="/login">log in</a> to navigate this site</h4>
+                </ng-template>
+            </div>
+                
                 
                 
                 <!-- no va más <a href="#" class="p-readmore">Read more <img src="assets/img/rm_arw_rgt.png" alt="Read More"
@@ -81,5 +86,5 @@
             </div>
         </div>
     </div>
-    </div>
+
 </section>
