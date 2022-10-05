@@ -1,3 +1,10 @@
+.media { 
+    display: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    align-self: center;
+}
+
 menu > div, ul {
     display: flex;
     justify-content: space-around;
@@ -66,4 +73,41 @@ header button{
     font-weight: 500;
     background-color: white;
     border: none;
+}
+
+@media only screen and (max-width:768px)
+{
+    .media { 
+        display: block;
+    }
+
+    menu > div, ul, li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+        padding-left: 0;
+        text-decoration: none;
+        font-size: 22px;
+        
+    }    
+
+    ul{
+        /*border: solid 1px black;*/
+    }
+
+    li{
+        /*border: solid 1px black;*/
+    }
+
+    a {
+        padding-top: 3rem;
+        /*border: solid 1px black;*/
+    }
+ 
+    header ul li{
+        padding: 0px;
+    
+    }
+
 }

@@ -116,3 +116,11 @@ h1{
     -ms-transform: translate(-50%, -50%);
     box-shadow: none;
   }
+
+  @media only screen and (max-width:768px)
+  {
+    .col-sm-5{
+        display:none;
+    }
+
+  }
