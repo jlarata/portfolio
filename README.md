@@ -9,17 +9,23 @@ El _front end_ está montado en Angular y hosteado en firebase, inspirado en [es
 
 # frontend
 
-[repo:](https://github.com/jlarata/portfolio)
-[web:](https://portfolio-1dac6.web.app/)
+[repositorio](https://github.com/jlarata/portfolio)
+<br>
+
+[web](https://portfolio-1dac6.web.app/)
 
  # backend
 
-[web:](http://fspf.herokuapp.com/)
-[repo:](https://github.com/jlarata/fspf)
+[repositorio](https://github.com/jlarata/fspf)
+<br>
+
+[web](http://fspf.herokuapp.com/)
+
 
 El sitio funciona con un sistema de seguridad jwt JSON validado por la API. Para navegar el sitio por favor usar las siguientes credenciales.
 
 Usuario: user
+<br>
 Password: discordfyl
 
 Por fuera del sistema de autenticación y seguridad la API funciona básicamente a partir de cuatro clases de objeto: clase.entity, clase.service, clase.repository y clase.controller. Para evitar redundancias, solo están documentados el objeto Persona y el objeto Producto (objeto no instrumentado, solo para desarrollo y pruebas). Pero todos los demás objetos están desarrollados con atributos y métodos muy similares.
