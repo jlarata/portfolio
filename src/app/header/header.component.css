@@ -59,13 +59,14 @@ header ul li a{
 }
 header ul li a:hover::after, header ul li a.is-active::after{
     content: '';
-    background: #C30B88;
-    height: 9px;
+    background: #0faa1c;
+    height: 19px;
     position: absolute;
     left: 1px;
     z-index: -1;
     bottom: 0;
     right: -3px;
+    opacity: .6;
 
 }
 header button{
