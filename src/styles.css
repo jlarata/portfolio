@@ -60,7 +60,7 @@ h1{
 .p-wrapper::before{
     content: '';
     background: #0faa1c;
-    height: 100%;
+    height: 100vw;
     width: 25vw;
     position: absolute;
     z-index: -1;

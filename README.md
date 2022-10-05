@@ -5,7 +5,7 @@ Este es el trabajo final para promocionar el curso #YoProgramo dictado por INTI 
 
 El desafío planteado fue desarrollar el portfolio para un desarrollador. Para aprovechar mejor las habilidades aprendidas, en lugar de eso elegí desarrollar una plataforma que administra y despliega los portfolios de una empresa imaginaria llamada d3c.
 
-El _front end_ está montado en Angular y hosteado en firebase, inspirado en [este template:](https://www.youtube.com/watch?v=LOMm7W9R0Oo). la API Rest está desarrollada con Java Springboot y desplegada en Heroku, tomando ideas de [este proyecto:](https://inezpre5.wordpress.com/2019/04/15/jwt-con-spring-boot-mysql-y-angular-7-capitulo-1-presentacion-del-proyecto/). La base de datos es MySQL y está hosteada en Clever Cloud. 
+El _front end_ está montado en Angular y hosteado en firebase, inspirado en [este template](https://www.youtube.com/watch?v=LOMm7W9R0Oo). la API Rest está desarrollada con Java Springboot y desplegada en Heroku, tomando ideas de [este proyecto](https://inezpre5.wordpress.com/2019/04/15/jwt-con-spring-boot-mysql-y-angular-7-capitulo-1-presentacion-del-proyecto/). La base de datos es MySQL y está hosteada en Clever Cloud. 
 
 # frontend
 
