@@ -28,5 +28,20 @@ Usuario: user
 <br>
 Password: discordfyl
 
+ # funcionamiento
+
 Por fuera del sistema de autenticación y seguridad la API funciona básicamente a partir de cuatro clases de objeto: clase.entity, clase.service, clase.repository y clase.controller. Para evitar redundancias, solo están documentados el objeto Persona y el objeto Producto (objeto no instrumentado, solo para desarrollo y pruebas). Pero todos los demás objetos están desarrollados con atributos y métodos muy similares.
 
+ # métodos
+
+En cada objeto.controller pueden encontrarse los métodos que implementan las llamadas GET, POST, PUT y DELETE. Cada componente o visualización del Front End (es una One Page Application) se corresponde con uno o varios métodos de un objeto.controller en el backend que, a su vez, despliega, modifica, crea o elimina valores en las tablas de la Base de Datos. En lugar de que cada visualización/componente despiegue un sencillo GET de una tabla, diseñé una serie de tablas que se relacionan entre ellas, y desarrollé por completo los métodos que implementan los SELECT+JOIN correspondientes. Por ejemplo: 
+
+@GetMapping("/habilidadporid/{id}")
+
+dentro de https://github.com/jlarata/fspf/blob/main/src/main/java/com/portfolio/fspf/controller/HabilidadController.java
+
+ # más métodos
+
+Los métodos que implementan POST y PUT y DELETE solamente son accesibles desde la pantalla "Admin Panel", que es visibe solamente cuando se loguea con privilegios de administrador.
+
+Gracias por leer y para cualquier comentario, escribir a ariel@cfee.gob.ar
