@@ -42,7 +42,7 @@ You can check the documentation in 'Persona' or 'Producto' objects. The other ob
 # Methods
 
 GET, POST, PUT and DELETE methods can be found in each objeto.controller. The frontend is a One Page Application, and each component/visualization matches one or several methods of an object.controller in the backend. 
-Each method shows, modifies, creates or eliminates values on the Database. Instead of asigning one visualization to one GET-method for each table, i've designed several tables with 1:1 or 1:* relations, and designed from scrath the methods to implement SELECT+JOIN querys. 
+Each method shows, modifies, creates or eliminates values on the Database. Instead of assigning one visualization to one GET-method for each table, i've designed several tables with 1:1 or 1:* relations, and designed from scrath the methods to implement SELECT+JOIN querys. 
 
 For example:
 
@@ -52,7 +52,7 @@ within https://github.com/jlarata/fspf/blob/main/src/main/java/com/portfolio/fsp
 
 # More Methods
 
-The POST, PUT and DELETE corresponding methods are only accesible from the "Admin Panel" screen, visible only after loggin with Admin privileges.
+The POST, PUT and DELETE corresponding methods are only accessible from the "Admin Panel" screen, visible only after loggin with Admin privileges.
 
 Thank you for reading. For comments and suggestions, write to ariel@cfee.gob.ar.
 
