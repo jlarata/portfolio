@@ -5,7 +5,7 @@
 
 This is the final project to complete the 2022 _YoProgramo_ course dictated by "Inti / Ministerio de Desarrollo Productivo."
 
-The assignement consist of developing a web platform using Angular (Typescript) and Springboot (Java + MySql).
+The assignment consisted of developing a web platform using Angular (Typescript) and Springboot (Java + MySql).
 I've choosen to build a portfolio of a non-existing company called _d3c_. 
 
 The frontend is built with Angular and hosted on Firebase based on [the following template](https://www.youtube.com/watch?v=LOMm7W9R0Oo.)
