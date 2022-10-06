@@ -1,4 +1,6 @@
 
+[README_spa](https://github.com/jlarata/portfolio/edit/main/README.md) / [README_en]([https://github.com/jlarata/portfolio/edit/main/README.md](https://github.com/jlarata/portfolio/edit/main/README_en)
+
 # d3c's Portfolio
 
 Este es el trabajo final para promocionar el curso #YoProgramo dictado por INTI / Ministerio de Desarrollo Productivo, durante el año 2022. Consiste en una plataforma _full stack_ utilizando los lenguajes TypeScript y Java, el motor de Base de Datos MySql, y los Frameworks Angular y SpringBoot.
@@ -30,7 +32,7 @@ Password: discordfyl
 
  # funcionamiento
 
-Por fuera del sistema de autenticación y seguridad la API funciona básicamente a partir de cuatro clases de objeto: clase.entity, clase.service, clase.repository y clase.controller. Para evitar redundancias, solo están documentados el objeto Persona y el objeto Producto (objeto no instrumentado, solo para desarrollo y pruebas). Pero todos los demás objetos están desarrollados con atributos y métodos muy similares.
+Por fuera del sistema de autenticación y seguridad la API funciona básicamente a partir de cuatro clases de objeto: objeto.entity, objeto.service, objeto.repository y objeto.controller. Para evitar redundancias, solo están documentados el objeto Persona y el objeto Producto (objeto no instrumentado, solo para desarrollo y pruebas). Pero todos los demás objetos están desarrollados con atributos y métodos muy similares.
 
  # métodos
 
