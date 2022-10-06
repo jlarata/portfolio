@@ -10,7 +10,7 @@ I've choosen to build a portfolio of a non-existing company called _d3c_.
 
 The frontend is built with Angular and hosted on Firebase based on [the following template](https://www.youtube.com/watch?v=LOMm7W9R0Oo.)
 
-The backend consist of a Java Rest API developed by Java Springbbot and deployed on Heroku. I've used [the following tutorial:](https://inezpre5.wordpress.com/2019/04/15/jwt-con-spring-boot-mysql-y-angular-7-capitulo-1-presentacion-del-proyecto/) as reference for building the backend.
+The backend consist of a Java Rest API developed by Java Springbbot and deployed on Heroku. I've used [the following tutorial](https://inezpre5.wordpress.com/2019/04/15/jwt-con-spring-boot-mysql-y-angular-7-capitulo-1-presentacion-del-proyecto/) as reference for building the backend.
 
 The MySQL database instance is hosted on 
 _Clever Cloud_
