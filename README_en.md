@@ -1,5 +1,5 @@
 
-[README_spa](https://github.com/jlarata/portfolio/edit/main/README.md) / [README_en](https://github.com/jlarata/portfolio/edit/main/README_en)
+[README_spa](https://github.com/jlarata/portfolio/edit/main/README.md) / [README_en](https://github.com/jlarata/portfolio/blob/main/README_en.md)
 
 # d3c Portfolio
 
