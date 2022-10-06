@@ -10,7 +10,7 @@ I've choosen to build a portfolio of a non-existing company called _d3c_.
 
 The frontend is built with Angular and hosted on Firebase based on [the following template](https://www.youtube.com/watch?v=LOMm7W9R0Oo.)
 
-The backend consist of a Java Rest API developed by Java Springbbot and deployed on Heroku. I've used [the following tutorial](https://inezpre5.wordpress.com/2019/04/15/jwt-con-spring-boot-mysql-y-angular-7-capitulo-1-presentacion-del-proyecto/) as reference for building the backend.
+The backend consist of a Java Rest API developed with Java Springbbot and deployed on Heroku. I've used [the following tutorial](https://inezpre5.wordpress.com/2019/04/15/jwt-con-spring-boot-mysql-y-angular-7-capitulo-1-presentacion-del-proyecto/) as reference for building the backend.
 
 The MySQL database instance is hosted on 
 _Clever Cloud_
@@ -42,7 +42,7 @@ You can check the documentation in 'Persona' or 'Producto' objects. The other ob
 # Methods
 
 GET, POST, PUT and DELETE methods can be found in each objeto.controller. The frontend is a One Page Application, and each component/visualization matches one or several methods of an object.controller in the backend. 
-Each method show, modify, create or eliminate values on the Database. Instead of asigning one visualization to one GET-method for each table, i've designed several tables with 1:1 or 1:* relations, and designed from scrath the methods to implement SELECT+JOIN querys. 
+Each method shows, modifies, creates or eliminates values on the Database. Instead of asigning one visualization to one GET-method for each table, i've designed several tables with 1:1 or 1:* relations, and designed from scrath the methods to implement SELECT+JOIN querys. 
 
 For example:
 
@@ -52,7 +52,7 @@ within https://github.com/jlarata/fspf/blob/main/src/main/java/com/portfolio/fsp
 
 # More Methods
 
-The POST, PUT and DELETE corresponding methods are onle accesibles from the "Admin Panel" screen, visible only after loggin with Admin privileges.
+The POST, PUT and DELETE corresponding methods are only accesible from the "Admin Panel" screen, visible only after loggin with Admin privileges.
 
 Thank you for reading. For comments and suggestions, write to ariel@cfee.gob.ar.
 
