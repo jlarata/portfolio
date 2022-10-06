@@ -18,16 +18,19 @@ _Clever Cloud_
 # Frontend
 
 [repository](https://github.com/jlarata/portfolio)
+<br>
 [web](https://portfolio-1dac6.web.app/)
 
 # Backend
 
-[repository:](https://github.com/jlarata/fspf)
-[web:](http://fspf.herokuapp.com/)
+[repository](https://github.com/jlarata/fspf)
+<br>
+[web](http://fspf.herokuapp.com/)
 
 This site uses a JWT JSON API validated security system. Please use the following credentials to navigate it:
 
 user: user
+<br>
 Password: discordfyl
 
 # Logic
