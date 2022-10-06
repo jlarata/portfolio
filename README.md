@@ -46,6 +46,6 @@ dentro de https://github.com/jlarata/fspf/blob/main/src/main/java/com/portfolio/
 
  # más métodos
 
-Los métodos que implementan POST y PUT y DELETE solamente son accesibles desde la pantalla "Admin Panel", que es visibe solamente cuando se loguea con privilegios de administrador.
+Los métodos que implementan POST y PUT y DELETE solamente son accesibles desde la pantalla "Admin Panel", que es visible solamente cuando se loguea con privilegios de administrador.
 
 Gracias por leer y para cualquier comentario, escribir a ariel@cfee.gob.ar
